@@ -22,16 +22,16 @@
 
 ## 📋 Table of Contents
 
-- [Overview](#-overview)
-- [Core Features](#-core-features)
-- [System Architecture](#-system-architecture)
-- [Data Structures & Algorithms](#-data-structures--algorithms)
-- [Prerequisites](#-prerequisites)
-- [Getting Started](#-getting-started)
-- [Project Structure](#-project-structure)
-- [Module Reference](#-module-reference)
-- [Roadmap](#-roadmap)
-- [Contributors](#-contributors)
+* [Overview](#-overview)
+* [Core Features](#-core-features)
+* [System Architecture](#-system-architecture)
+* [Data Structures & Algorithms](#-data-structures--algorithms)
+* [Prerequisites](#-prerequisites)
+* [Getting Started](#-getting-started)
+* [Project Structure](#-project-structure)
+* [Module Reference](#-module-reference)
+* [Roadmap](#-roadmap)
+* [Contributors](#-contributors)
 
 ---
 
@@ -208,41 +208,41 @@ SocioNet-Plus-Plus/
 <details>
 <summary><b>Graph.h — Relationship Engine</b></summary>
 
-- `sendFriendRequest(from, to)` — Creates a directed `REQUEST_SENT` edge
-- `acceptFriendRequest(from, to)` — Upgrades to bidirectional `FRIEND` edges
-- `getFriends(user)` — Returns confirmed friends via adjacency list traversal
-- `getMutualFriends(u1, u2)` — BFS-based intersection of two friend sets
-- `SuggestionGraph::suggestFor(...)` — Hybrid BFS + similarity scoring for recommendations
-- Persisted via `saveToBinaryFile()` / `loadFromBinaryFile()`
+* `sendFriendRequest(from, to)` — Creates a directed `REQUEST_SENT` edge
+* `acceptFriendRequest(from, to)` — Upgrades to bidirectional `FRIEND` edges
+* `getFriends(user)` — Returns confirmed friends via adjacency list traversal
+* `getMutualFriends(u1, u2)` — BFS-based intersection of two friend sets
+* `SuggestionGraph::suggestFor(...)` — Hybrid BFS + similarity scoring for recommendations
+* Persisted via `saveToBinaryFile()` / `loadFromBinaryFile()`
 
 </details>
 
 <details>
 <summary><b>FileManager.h — Storage Layer</b></summary>
 
-- 27 binary files partition users by first alphabetic character of username
-- All files maintain sorted order — enables O(log n) binary search
-- `insertUser()` — finds insertion point, shifts, writes back
-- `getUserByUsername()` — determines file → binary search → returns User
-- Email hashmap stored separately in `data/graphs/email_to_username.bin`
+* 27 binary files partition users by first alphabetic character of username
+* All files maintain sorted order — enables O(log n) binary search
+* `insertUser()` — finds insertion point, shifts, writes back
+* `getUserByUsername()` — determines file, binary search, returns User
+* Email hashmap stored separately in `data/graphs/email_to_username.bin`
 
 </details>
 
 <details>
 <summary><b>Interest.h — Post System</b></summary>
 
-- 5 interest types: `BookInterest`, `MovieInterest`, `PlaceInterest`, `FoodInterest`, `SportInterest`
-- All stored as `InterestVariant` (`std::variant`) — no inheritance overhead
-- `InterestStack` — vector-backed stack for recent posts, fully serializable
+* 5 interest types: `BookInterest`, `MovieInterest`, `PlaceInterest`, `FoodInterest`, `SportInterest`
+* All stored as `InterestVariant` (`std::variant`) — no inheritance overhead
+* `InterestStack` — vector-backed stack for recent posts, fully serializable
 
 </details>
 
 <details>
 <summary><b>Helper.h — Utilities</b></summary>
 
-- `SuffixAutomaton` — O(n) substring search across all usernames
-- `UserHelper` — static email hashmap, username vector, graph pointers
-- `Date` — lightweight POD date type used by Interest and User
+* `SuffixAutomaton` — O(n) substring search across all usernames
+* `UserHelper` — static email hashmap, username vector, graph pointers
+* `Date` — lightweight POD date type used by Interest and User
 
 </details>
 
@@ -250,17 +250,17 @@ SocioNet-Plus-Plus/
 
 ## 🌱 Roadmap
 
-- [x] User registration & authentication with encryption
-- [x] Friend request system (send / accept / reject)
-- [x] Interest posts with variant-based polymorphism
-- [x] Binary file persistence across sessions
-- [x] BFS-based mutual friends
-- [x] Suffix Automaton username search
-- [x] Friend suggestion algorithm
-- [ ] GUI migration using **SFML** or **Qt**
-- [ ] PageRank implementation for influencer detection
-- [ ] SQL database backend (replace binary files)
-- [ ] Unit test suite (Google Test)
+* [x] User registration & authentication with encryption
+* [x] Friend request system (send / accept / reject)
+* [x] Interest posts with variant-based polymorphism
+* [x] Binary file persistence across sessions
+* [x] BFS-based mutual friends
+* [x] Suffix Automaton username search
+* [x] Friend suggestion algorithm
+* [ ] GUI migration using **SFML** or **Qt**
+* [ ] PageRank implementation for influencer detection
+* [ ] SQL database backend (replace binary files)
+* [ ] Unit test suite (Google Test)
 
 ---
 
@@ -268,8 +268,10 @@ SocioNet-Plus-Plus/
 
 | Name | Role |
 |------|------|
-| **Abdur Rehman Khan** | Backend, Graph Engine, File System, Auth |
-| **Syed Sufyan** | Frontend UI, Project Architecture, Integration |
+| **Syed Sufyan** | Backend Architecture, Graph Engine, File System, Suffix Automaton |
+| **Abdur Rehman Khan** | Console UI Design, Box Rendering System, Graphs' Logic Integration, Authentication  |
+
+---
 
 ---
 
@@ -277,6 +279,14 @@ SocioNet-Plus-Plus/
 
 **Developed with ❤️ at FAST-NUCES Karachi**
 
-*Data Structures & Algorithms — Semester 4*
+*Data Structures & Algorithms — Semester 3*
+
+---
+
+### ⚡ No algorithm was harmed in the making of this project.
+*Every lookup is O(log n). Every search is O(n). Every friend suggestion is O(V+E).*
+*We do not negotiate with O(n²).*
+
+Happy connecting! 🌐
 
 </div>
