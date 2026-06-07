@@ -1,0 +1,11 @@
+src/main.cpp
+src/authentication.cpp
+src/fileManager.cpp
+src/graph.cpp
+src/helper.cpp
+src/interest.cpp
+src/uiAuthentication.cpp
+src/uiHelpers.cpp
+src/uiInterest.cpp
+src/uiUser.cpp
+src/user.cpp
