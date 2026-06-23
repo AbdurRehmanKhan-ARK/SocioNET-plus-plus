@@ -62,7 +62,7 @@ The entire backend is built from scratch in **C++17** with no external libraries
 
 ```
 ┌─────────────────────────────────────────────────────────┐
-│                     main.cpp (Entry Point)               │
+│                     main.cpp (Entry Point)              │
 └──────────────────────────┬──────────────────────────────┘
                            │
           ┌────────────────┼────────────────┐
